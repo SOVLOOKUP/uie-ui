@@ -3,6 +3,8 @@ import { setupLayouts } from 'virtual:generated-layouts'
 import App from './App.vue'
 import generatedRoutes from '~pages'
 
+// 引入组件库全局样式资源
+import 'tdesign-vue-next/es/style/index.css'
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
@@ -18,3 +20,4 @@ export const createApp = ViteSSG(
     Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
   },
 )
+
